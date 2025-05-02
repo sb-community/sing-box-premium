@@ -4,7 +4,7 @@
 * 来自于[sing-box下游仓库](https://github.com/reF1nd/sing-box/blob/reF1nd-dev/)
 * 手动构建:
 ```
-CGO_ENABLED=0 go build -v -trimpath -ldflags "-checklinkname=0 -X 'github.com/sagernet/sing-box/constant.Version=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases | grep '"tag_name"' | head -n 1 | cut -d ":" -f2 | sed 's/[",v ]//g')' -s -w -buildid=" -tags "with_quic with_grpc with_dhcp with_wireguard with_ech with_utls with_reality_server with_acme with_clash_api with_v2ray_api with_gvisor with_tailscale" ./cmd/sing-box
+go build -v -trimpath -ldflags "-checklinkname=0 -X 'github.com/sagernet/sing-box/constant.Version=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases | grep '"tag_name"' | head -n 1 | cut -d ":" -f2 | sed 's/[",v ]//g')' -s -w -buildid=" -tags "with_quic with_grpc with_dhcp with_wireguard with_ech with_utls with_reality_server with_acme with_clash_api with_v2ray_api with_gvisor with_tailscale with_embedded_tor" ./cmd/sing-box
 ```
 
 ## 使用说明
