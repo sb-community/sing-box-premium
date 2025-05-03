@@ -44,7 +44,7 @@ jobs:
         run: |
           release_version=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases | grep '"tag_name"' | head -n 1 | cut -d ":" -f2 | sed 's/[",v ]//g')
           echo release_version=$release_version >> $GITHUB_OUTPUT
-          echo release_tags=with_quic with_grpc with_dhcp with_wireguard with_ech with_utls with_reality_server with_acme with_clash_api with_v2ray_api with_gvisor with_tailscale >> $GITHUB_OUTPUT
+          echo release_tags=with_quic with_grpc with_dhcp with_wireguard with_utls with_acme with_clash_api with_v2ray_api with_gvisor with_tailscale >> $GITHUB_OUTPUT
 
   release_cross:
     strategy:
